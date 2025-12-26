@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Titan’s Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp { animation: fadeInUp 1s ease-out forwards; }
+    .animate-delay-100 { animation-delay: 0.1s; }
+    .animate-delay-200 { animation-delay: 0.2s; }
+    .animate-delay-300 { animation-delay: 0.3s; }
+    .animate-delay-400 { animation-delay: 0.4s; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+<!-- ====== NAVBAR ====== -->
+<header class="fixed top-0 left-0 w-full bg-gray-900 backdrop-blur-md shadow-md z-50 transition-colors duration-300">
+  <div class="container mx-auto flex justify-between items-center px-6 py-3">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Titan’s Gym Logo" class="w-14 h-14 object-contain rounded-full shadow-md" />
+      <h1 class="text-2xl font-extrabold text-white tracking-tight">Titan’s Gym</h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html" class="text-white hover:text-indigo-500 transition-colors">Home</a>
+      <a href="about.html" class="text-indigo-500 font-semibold">About</a>
+      <a href="login.html" class="text-white hover:text-indigo-500 transition-colors">Login</a>
+      <a href="signup.html" class="text-white hover:text-indigo-500 transition-colors">Signup</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ====== ABOUT SECTION ====== -->
+<section id="about" class="pt-24 py-16 bg-white text-gray-900 overflow-hidden">
+  <div class="container mx-auto px-4 md:px-10 grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Image Section -->
+    <div class="flex md:justify-start justify-center">
+      <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 overflow-hidden rounded-3xl shadow-2xl border border-gray-200 hover:scale-105 transform transition duration-500">
+        <img src="owner.jpg" alt="Mr. Tahir Shaikh" class="w-full h-full object-cover hover:scale-105 transform transition duration-700">
+      </div>
+    </div>
+
+    <!-- Text Section -->
+    <div class="space-y-5 text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-500 drop-shadow-md animate-fadeInUp">About Titan’s Gym</h2>
+      <p class="leading-relaxed text-base md:text-lg animate-fadeInUp animate-delay-100">
+        Founded and guided by <span class="font-semibold">Mr. Tahir Shaikh</span>, Titan’s Gym stands as a symbol of discipline,
+        strength, and transformation. Built for individuals who aim to become their strongest selves — physically and mentally — our gym
+        provides advanced training equipment and the motivation to push beyond limits.
+      </p>
+      <p class="leading-relaxed text-base md:text-lg animate-fadeInUp animate-delay-200">
+        With a balance of modern machines, open training zones, and personalized guidance, Titan’s Gym ensures every workout counts.
+        Whether you’re chasing endurance, muscle, or performance — here, every rep brings you closer to your best version.
+      </p>
+      <p class="text-indigo-500 font-semibold text-lg animate-fadeInUp animate-delay-300">"Unleash the Power Within."</p>
+      <p class="text-gray-700 text-sm animate-fadeInUp animate-delay-400">— Mr. Tahir Shaikh, Founder & Head Trainer</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== WHY CHOOSE US ====== -->
+<section class="py-20 bg-gray-800 text-white text-center">
+  <div class="container mx-auto px-6 md:px-12">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 drop-shadow-lg">Why Choose Titan’s Gym?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <div class="bg-gray-700/40 backdrop-blur-md rounded-2xl p-8 hover:scale-105 transition shadow-lg hover:shadow-indigo-500/30">
+        <h3 class="text-xl font-semibold mb-3 text-indigo-300">Expert Coaching</h3>
+        <p class="text-gray-200">Led by professionals who understand real transformation — not shortcuts. You’ll learn, grow, and evolve the right way.</p>
+      </div>
+
+      <div class="bg-gray-700/40 backdrop-blur-md rounded-2xl p-8 hover:scale-105 transition shadow-lg hover:shadow-indigo-500/30">
+        <h3 class="text-xl font-semibold mb-3 text-indigo-300">Premium Equipment</h3>
+        <p class="text-gray-200">Every machine and tool is selected for performance, comfort, and safety — built for real athletes.</p>
+      </div>
+
+      <div class="bg-gray-700/40 backdrop-blur-md rounded-2xl p-8 hover:scale-105 transition shadow-lg hover:shadow-indigo-500/30">
+        <h3 class="text-xl font-semibold mb-3 text-indigo-300">Community & Motivation</h3>
+        <p class="text-gray-200">You’ll never train alone. Our members lift, inspire, and push each other — every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="py-20 bg-indigo-500 text-white text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">Your Transformation Starts Here</h2>
+  <p class="text-white mb-8 max-w-2xl mx-auto">
+    Stop waiting for the “right time”. Be the reason you start today.
+  </p>
+  <a href="signup.html" class="bg-white text-indigo-500 px-8 py-3 rounded-lg font-semibold transition transform hover:scale-105 shadow-lg">
+    Join Titan’s Gym
+  </a>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-gray-900 text-gray-300 py-10 text-center border-t border-gray-700">
+  <div class="flex flex-col items-center space-y-4">
+    <img src="logo.png" alt="Titan’s Gym Logo" class="w-14 h-14 rounded-full shadow-md">
+    <h3 class="text-xl font-bold text-white drop-shadow-md">Titan’s Gym</h3>
+    <p class="text-indigo-500 italic">“Unleash The Strength Within”</p>
+  </div>
+
+  <div class="mt-6 space-x-6 text-sm">
+    <a href="index.html" class="hover:text-indigo-500 transition">Home</a>
+    <a href="about.html" class="hover:text-indigo-500 transition">About</a>
+    <a href="login.html" class="hover:text-indigo-500 transition">Login</a>
+    <a href="signup.html" class="hover:text-indigo-500 transition">Signup</a>
+  </div>
+
+  <p class="text-sm text-gray-400 mt-3">
+    📍 Shahad | 
+    <a href="https://maps.app.goo.gl/dBZ9FYHEtRDCimcX7" target="_blank" class="text-indigo-500 hover:underline">View on Google Maps</a>
+  </p>
+
+  <p class="text-sm text-gray-500 mt-2">© 2025 Titan’s Gym | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

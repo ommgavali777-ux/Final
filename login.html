@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Titan's Gym (Centered)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* ensure no browser default margins and full height so centering works */
+    html, body { height: 100%; margin: 0; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 m-0">
+
+  <!-- Back button (absolute - won't affect layout) -->
+  <a href="index.html"
+     class="absolute top-6 left-6 text-indigo-600 hover:underline font-medium flex items-center space-x-1 p-2 rounded-md bg-white/10 hover:bg-white/20 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+    </svg>
+    <span>Back</span>
+  </a>
+
+  <!-- FIXED full-screen wrapper that always centers its content -->
+  <div class="fixed inset-0 flex items-center justify-center px-4">
+    <!-- Card -->
+    <div class="w-full max-w-md bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl">
+      <!-- Logo -->
+      <div class="flex justify-center mb-6">
+        <img src="logo.png" alt="Titan's Gym Logo" class="w-22 h-16">
+      </div>
+
+      <h2 class="text-2xl font-bold text-center text-indigo-600 mb-6">Login to Titan's Gym</h2>
+
+      <form id="loginForm" class="space-y-4">
+        <input type="email" id="email" placeholder="Email"
+               class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" required>
+
+        <input type="password" id="password" placeholder="Password"
+               class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" required>
+
+        <button type="submit"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-lg font-semibold transition">
+          Login
+        </button>
+
+        <p class="text-center text-sm text-gray-600">
+          <a href="#" id="forgetLink" class="text-indigo-600 hover:underline">Forgot password?</a>
+        </p>
+      </form>
+
+      <p id="statusMsg" class="text-center text-sm text-gray-700 mt-4"></p>
+
+      <p class="text-center text-gray-700 mt-4 text-sm">
+        Don’t have an account? <a href="signup.html" class="text-indigo-700 hover:underline">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>

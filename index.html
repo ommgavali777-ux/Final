@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titan’s Gym | Push Your Limits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <!-- ====== NAVBAR ====== -->
+    <header
+      class="fixed top-0 left-0 w-full bg-gray-900 backdrop-blur-md shadow-md z-50 transition-colors duration-300"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center px-6 py-3"
+      >
+        <div class="flex items-center space-x-3">
+          <img
+            src="logo.png"
+            alt="Titan’s Gym Logo"
+            class="w-18 h-12 object-contain rounded-full"
+          />
+          <h1 class="text-2xl font-extrabold text-white tracking-tight">
+            Titan’s Gym
+          </h1>
+        </div>
+
+        <nav class="hidden md:flex space-x-8 font-medium">
+          <a
+            href="index.html"
+            class="text-white hover:text-indigo-500 transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-white hover:text-indigo-500 transition-colors"
+            >About</a
+          >
+          <a
+            href="login.html"
+            class="text-white hover:text-indigo-500 transition-colors"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="text-white hover:text-indigo-500 transition-colors"
+            >Signup</a
+          >
+          <a
+            href="admin.html"
+            class="text-white hover:text-indigo-500 transition-colors"
+            >Admin</a
+          >
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="md:hidden flex flex-col justify-center space-y-1.5 focus:outline-none"
+        >
+          <span class="w-6 h-0.5 bg-white"></span>
+          <span class="w-6 h-0.5 bg-white"></span>
+          <span class="w-6 h-0.5 bg-white"></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-16 right-0 w-26 bg-gray-900 shadow-lg rounded-lg z-50 transform transition-all duration-300 origin-top scale-y-0"
+      >
+        <nav class="flex flex-col space-y-4 p-6">
+          <a
+            href="index.html"
+            class="text-white hover:text-indigo-500 text-lg font-medium"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-white hover:text-indigo-500 text-lg font-medium"
+            >About</a
+          >
+          <a
+            href="login.html"
+            class="text-white hover:text-indigo-500 text-lg font-medium"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="text-white hover:text-indigo-500 text-lg font-medium"
+            >Signup</a
+          >
+          <a
+            href="admin.html"
+            class="text-white hover:text-indigo-500 text-lg font-medium"
+            >Admin</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section
+      class="relative w-full h-screen flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="Gym 2.png"
+        alt="Gym Hero"
+        class="hidden md:block absolute inset-0 w-full h-full object-cover"
+      />
+      <img
+        src="gym3.png"
+        alt="Gym Hero Mobile"
+        class="block md:hidden absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/40"
+      ></div>
+      <div
+        class="relative z-10 text-center text-white px-4 max-w-2xl animate-fadeIn"
+      >
+        <h2
+          class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight"
+        >
+          Push Your <span class="text-indigo-500">Limits</span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+          <span class="font-semibold">Transform your body and mind</span> with
+          expert trainers, cutting-edge equipment, and a community built for
+          growth.
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="signup.html"
+            class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg shadow-lg font-semibold transition transform hover:scale-105"
+          >
+            Get Started
+          </a>
+          <a
+            href="about.html"
+            class="border border-white/70 hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== OWNER SECTION ====== -->
+    <section class="py-20 bg-gray-50">
+      <div
+        class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-6"
+      >
+        <div class="flex justify-center md:justify-start flex-1">
+          <div class="text-center md:text-left">
+            <img
+              src="owner.jpg"
+              alt="Mr. Tahir Shaikh"
+              class="w-56 md:w-72 rounded-xl shadow-2xl mb-4 mx-auto md:mx-0"
+            />
+            <p class="text-gray-700 font-semibold text-lg">
+              Mr. <span class="text-indigo-600">Tahir Shaikh</span>,
+              Professional Athlete & Master Trainer
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-1 text-center md:text-left md:ml-6">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+            Meet Our Founder
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 mb-4">
+            <span class="font-semibold text-indigo-600">Mr. Tahir Shaikh</span>
+            is a <span class="font-semibold">multitalented professional</span>.
+            Not only is he an
+            <span class="font-semibold">expert trainer</span> transforming
+            bodies, but he’s also a
+            <span class="font-semibold">passionate athlete</span> who runs daily
+            and has won multiple <span class="font-semibold">marathons</span>.
+          </p>
+          <p class="text-base md:text-lg text-gray-600 mb-4">
+            Beyond fitness, he is a
+            <span class="font-semibold">creative tattoo artist</span>, blending
+            art and inspiration in his designs.
+          </p>
+          <a
+            href="signup.html"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Train with Tahir
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ACHIEVEMENTS SECTION ====== -->
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+      Founder’s Achievements
+    </h2>
+    <p class="text-gray-600 mb-12">
+      Proven performance at elite half marathon events
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Achievement 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img
+       src="db.jpeg"
+       alt="The Dombivlikar Friendship Run 2025"
+       class="w-full aspect-[3/4] object-cover"
+/>
+
+        <div class="p-6 text-left">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            The Dombivlikar Friendship Run 2025
+          </h3>
+          <p class="text-indigo-600 font-semibold mb-1">
+            🥈 1st Runner-Up — 21.1 KM (Half Marathon)
+          </p>
+          <p class="text-gray-600 text-sm">
+            Competing against top-level runners, Tahir Shaikh secured a podium
+            finish in the 21.1 km Half Marathon, demonstrating exceptional
+            endurance and elite athletic conditioning.
+          </p>
+        </div>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img
+  src="sb.jpeg"
+  alt="Swachh Navi Mumbai Half Marathon 2025"
+  class="w-full aspect-[3/4] object-cover"
+/>
+
+        <div class="p-6 text-left">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Swachh Navi Mumbai Half Marathon 2025
+          </h3>
+          <p class="text-indigo-600 font-semibold mb-1">
+            🥈 2nd Runner-Up — 21 KM
+          </p>
+          <p class="text-gray-600 text-sm">
+            A strong podium finish at the Swachh Navi Mumbai Half Marathon reflects
+            consistency, discipline, and professional-level fitness excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ====== MEMBERSHIP PLANS ====== -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+          Membership Plans
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition w-full md:w-80"
+          >
+            <h3 class="font-semibold text-xl mb-2">1 Month</h3>
+            <p class="text-gray-600 mb-4">
+              Full access to gym equipment and group classes
+            </p>
+            <p class="text-indigo-600 font-bold text-2xl mb-4">₹700</p>
+            <a
+              href="membership.html?plan=1month"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition transform hover:scale-105"
+            >
+              Join Now
+            </a>
+          </div>
+
+          <div
+            class="bg-indigo-600 text-white rounded-xl shadow-2xl p-8 hover:shadow-2xl transition w-full md:w-80 relative"
+          >
+            <h3 class="font-semibold text-xl mb-2">3 Months</h3>
+            <p class="text-white mb-4">
+              Full access to gym equipment and group classes
+            </p>
+            <p class="font-bold text-2xl mb-6">₹1800</p>
+            <a
+              href="membership.html?plan=3months"
+              class="bg-white text-indigo-600 px-6 py-2 rounded-lg font-semibold transition hover:bg-gray-100 transform hover:scale-105"
+            >
+              Join Now
+            </a>
+
+            <span
+              class="absolute -top-3 right-0 bg-yellow-400 text-gray-900 font-bold px-3 py-1 rounded-full text-sm shadow-lg"
+              >Most Popular</span
+            >
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition w-full md:w-80"
+          >
+            <h3 class="font-semibold text-xl mb-2">Half Yearly / Yearly</h3>
+            <p class="text-gray-600 mb-4">Coming Soon</p>
+            <p class="text-indigo-600 font-bold text-2xl mb-4">TBD</p>
+            <a
+              href="membership.html?plan=yearly"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition transform hover:scale-105"
+            >
+              Join Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== FACILITIES SECTION ====== -->
+    <section class="py-20 bg-gray-900 text-white relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 opacity-95"
+      ></div>
+
+      <div class="relative container mx-auto px-6">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-center mb-16 text-indigo-400"
+        >
+          World-Class Facilities
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Cardio & Conditioning -->
+          <div
+            class="bg-gray-800/60 backdrop-blur-md rounded-2xl shadow-lg p-8 hover:shadow-indigo-500/40 hover:scale-105 transition"
+          >
+            <div class="text-5xl mb-4">🏃‍♂️</div>
+            <h3 class="text-2xl font-semibold mb-3 text-indigo-300">
+              Cardio & Conditioning
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+              High-performance zone featuring
+              <span class="font-semibold text-white"
+                >treadmills, cycling stations, rope climbs, battle ropes,</span
+              >
+              and punching bags to boost your stamina, endurance, and agility.
+            </p>
+          </div>
+
+          <!-- Strength & Training -->
+          <div
+            class="bg-gray-800/60 backdrop-blur-md rounded-2xl shadow-lg p-8 hover:shadow-indigo-500/40 hover:scale-105 transition"
+          >
+            <div class="text-5xl mb-4">🏋️‍♂️</div>
+            <h3 class="text-2xl font-semibold mb-3 text-indigo-300">
+              Strength & Training Zone
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+              Packed with
+              <span class="font-semibold text-white"
+                >machines for chest, shoulders, triceps, and back</span
+              >
+              plus a full
+              <span class="font-semibold text-white"
+                >dumbbell and free-weight section</span
+              >
+              for powerlifting, muscle building, and toning.
+            </p>
+          </div>
+
+          <!-- Comfort & Recovery -->
+          <div
+            class="bg-gray-800/60 backdrop-blur-md rounded-2xl shadow-lg p-8 hover:shadow-indigo-500/40 hover:scale-105 transition"
+          >
+            <div class="text-5xl mb-4">🧘</div>
+            <h3 class="text-2xl font-semibold mb-3 text-indigo-300">
+              Comfort & Recovery
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+              Fully
+              <span class="font-semibold text-white">air-conditioned</span>
+              environment with
+              <span class="font-semibold text-white"
+                >hydration area, storage, changing rooms,</span
+              >
+              and
+              <span class="font-semibold text-white">stretching kits</span> for
+              a complete fitness experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CALL TO ACTION ====== -->
+    <section class="py-16 bg-indigo-600 text-white text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Become a Titan</h2>
+        <p class="text-lg mb-6">
+          No excuses. No limits. Become the strongest version of yourself today.
+        </p>
+        <a
+          href="signup.html"
+          class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold transition transform hover:scale-105 shadow-lg"
+          >Start Your Journey</a
+        >
+      </div>
+    </section>
+
+    <!-- ====== REVIEWS ====== -->
+    <section class="py-20 bg-gray-50" id="reviews">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+          Member Reviews
+        </h2>
+
+        <div
+          id="review-list"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
+        ></div>
+
+        <div class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-xl font-semibold mb-4 text-gray-800">
+            Write a Review
+          </h3>
+          <input
+            id="reviewer"
+            type="text"
+            placeholder="Your Name"
+            class="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <textarea
+            id="review-text"
+            placeholder="Your Experience..."
+            rows="3"
+            class="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
+          <button
+            id="submit-review"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold transition transform hover:scale-105 w-full"
+          >
+            Submit Review
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PREMIUM FOOTER (UPDATED) ====== -->
+    <footer
+      class="bg-gray-900 text-gray-300 pt-14 pb-8 mt-20 border-t border-gray-700"
+    >
+      <div class="container mx-auto px-6 md:px-12">
+        <!-- ====== Top Section: Brand + Quick Links ====== -->
+        <div
+          class="flex flex-col md:flex-row md:justify-between md:items-center mb-10 text-center md:text-left"
+        >
+          <!-- Brand Section -->
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-0"
+          >
+            <img
+              src="logo.png"
+              alt="Titan’s Gym Logo"
+              class="w-14 h-14 object-contain rounded-full shadow-md mb-3 md:mb-0"
+            />
+            <div>
+              <h2 class="text-white font-bold text-2xl tracking-wide">
+                Titan's Gym
+              </h2>
+              <p class="text-indigo-400 text-sm italic mt-1">
+                "Unleash the Titan Within"
+              </p>
+              <p class="text-gray-400 text-sm mt-2">
+                📍
+                <a
+                  href="https://maps.app.goo.gl/dBZ9FYHEtRDCimcX7"
+                  target="_blank"
+                  class="hover:text-indigo-400 transition"
+                  >Shahad, India</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Links (Single Line) -->
+          <div
+            class="flex flex-wrap justify-center md:justify-end gap-5 text-sm font-medium"
+          >
+            <a href="index.html" class="hover:text-indigo-400 transition"
+              >Home</a
+            >
+            <a href="about.html" class="hover:text-indigo-400 transition"
+              >About</a
+            >
+            <a href="login.html" class="hover:text-indigo-400 transition"
+              >Login</a
+            >
+            <a href="signup.html" class="hover:text-indigo-400 transition"
+              >Signup</a
+            >
+            <a href="admin.html" class="hover:text-indigo-400 transition"
+              >Admin</a
+            >
+          </div>
+        </div>
+
+        <!-- ====== Divider ====== -->
+        <div class="border-t border-gray-700 my-6"></div>
+
+        <!-- ====== Bottom Section: Contact + Social + Copyright ====== -->
+        <div
+          class="flex flex-col md:flex-row md:justify-between items-center gap-6"
+        >
+          <!-- Contact & Social -->
+          <div
+            class="flex flex-col md:flex-row md:items-center md:space-x-8 text-sm"
+          >
+            <p class="flex items-center space-x-2 mb-3 md:mb-0">
+              <span>📞</span>
+              <a href="tel:9309574764" class="hover:text-indigo-400 transition"
+                >+91 93095 74764</a
+              >
+            </p>
+
+            <div class="flex space-x-4">
+              <a
+                href="https://www.instagram.com/titansgym_/"
+                target="_blank"
+                class="flex items-center space-x-2 hover:scale-110 transform transition"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                  alt="Titans Gym Instagram"
+                  class="w-5 h-5"
+                />
+                <span class="text-white text-sm truncate">@titansgym_</span>
+              </a>
+              <a
+                href="https://www.instagram.com/tahir_runner786/"
+                target="_blank"
+                class="flex items-center space-x-2 hover:scale-110 transform transition"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                  alt="Owner Instagram"
+                  class="w-5 h-5"
+                />
+                <span class="text-white text-sm truncate"
+                  >@tahir_runner786</span
+                >
+              </a>
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <div
+            class="text-center md:text-right text-gray-500 text-xs md:text-sm"
+          >
+            © 2025
+            <span class="text-indigo-400 font-medium">Titan's Gym</span> | All
+            Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+    </style>
+  </body>
+</html>

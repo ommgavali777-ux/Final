@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Titan's Gym - Admin Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 text-white min-h-screen flex flex-col overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center bg-gray-800/80 backdrop-blur-md p-4 shadow-lg">
+    <div class="flex items-center gap-3">
+      <img src="logo.png" alt="Titan's Gym Logo" class="h-10 w-auto object-contain">
+      <div class="text-2xl font-bold">Titan's Gym Admin</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-4 sm:p-6">
+    <div class="bg-gray-900/70 backdrop-blur-md rounded-2xl shadow-2xl p-4 sm:p-6">
+
+      <!-- Tabs -->
+      <div class="flex gap-3 mb-6">
+        <button id="attendanceTab" class="tab-btn bg-indigo-600 px-4 py-2 rounded-lg font-semibold">Attendance</button>
+        <button id="membershipTab" class="tab-btn bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg font-semibold">Membership Requests</button>
+      </div>
+
+      <!-- ================= Attendance Section ================= -->
+      <div id="attendanceSection">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+          <h2 class="text-2xl font-bold text-indigo-400">Attendance Records</h2>
+
+          <!-- Actions -->
+          <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <input type="text" id="searchInput" placeholder="Search by Name, Email, UID..." 
+                   class="px-4 py-2 rounded-lg text-black w-full sm:w-64">
+            <select id="filterSelect" class="px-4 py-2 rounded-lg text-black w-full sm:w-auto">
+              <option value="all">All Records</option>
+              <option value="today">Today</option>
+              <option value="week">This Week</option>
+              <option value="month">This Month</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Desktop Table -->
+        <div class="hidden md:block overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="text-gray-300 border-b border-gray-700">
+                <th class="py-2 px-3 cursor-pointer" data-sort="name">Name ⬍</th>
+                <th class="py-2 px-3 cursor-pointer" data-sort="email">Email ⬍</th>
+                <th class="py-2 px-3 cursor-pointer" data-sort="uid">UID ⬍</th>
+                <th class="py-2 px-3 cursor-pointer" data-sort="date">Date ⬍</th>
+                <th class="py-2 px-3">Entry</th>
+                <th class="py-2 px-3">Exit</th>
+              </tr>
+            </thead>
+            <tbody id="attendance-table" class="divide-y divide-gray-700">
+              <tr><td colspan="6" class="text-center py-4 text-gray-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Card Layout -->
+        <div id="attendance-cards" class="md:hidden flex flex-col gap-4 w-full overflow-x-hidden"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex justify-center gap-2 mt-4 flex-wrap"></div>
+
+        <!-- Bottom Row: Logout + CSV Export -->
+        <div class="mt-4 flex justify-end gap-3">
+          <button id="logoutBtn" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold transition">
+            Logout
+          </button>
+          <button id="exportBtn" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg font-semibold transition">
+            Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= Membership Requests Section ================= -->
+      <div id="membershipSection" class="hidden">
+        <h2 class="text-2xl font-bold text-indigo-400 mb-4">Pending Membership Requests</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="text-gray-300 border-b border-gray-700">
+                <th class="py-2 px-3">Email</th>
+                <th class="py-2 px-3">Plan</th>
+                <th class="py-2 px-3">Amount</th>
+                <th class="py-2 px-3">Date</th>
+                <th class="py-2 px-3">Action</th>
+              </tr>
+            </thead>
+            <tbody id="membershipTable" class="divide-y divide-gray-700">
+              <tr><td colspan="5" class="text-center py-4 text-gray-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
